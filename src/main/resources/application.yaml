@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: chinook
+  profiles:
+    default: dev
+  docker:
+    compose:
+      lifecycle-management: start_only
+      skip:
+        in-tests: false
+  flyway:
+    locations: classpath:db/migration
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+logging:
+  level:
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG
