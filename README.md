@@ -11,6 +11,8 @@ Application de révision Java 17/21 → microservices & Kafka, sur la base Chino
 ## Démarrer
 ```bash
 ./mvnw spring-boot:run
+
+curl localhost:8080/api/catalog/stats
 ```
 
 ## Conventions de commit
