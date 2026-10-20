@@ -27,7 +27,7 @@ public class PaymentResultTest {
             case PaymentResult.Paid(var id, var amount, var ref) -> "Payee: " + amount.amount();
             case PaymentResult.Declined declined -> "Refusee: " + declined.reason();
             case PaymentResult.Pending pending -> "En attente";
-            case PaymentResult.Refunded(var id, var refundedAmount, var reason) -> "Remboursee: " + refundedAmount.amount() + "(" + reason + ")";
+            case PaymentResult.Refunded(var id, var refundedAmount, var reason) -> "Remboursee: " + refundedAmount.amount() + " (" + reason + ")";
         };
     }
 
